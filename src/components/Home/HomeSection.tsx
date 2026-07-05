@@ -69,7 +69,7 @@ export default function Home() {
                 {/* Name */}
                 <div className="space-y-1">
                   <h1 className="text-foreground text-2xl sm:text-3xl md:text-4xl font-black tracking-tight select-none leading-none">
-                    Leonardo Giuseppe Ziche<span className="text-foreground/30">.</span>
+                    Leonardo G. Ziche<span className="text-foreground/30">.</span>
                   </h1>
                   <div className="w-12 sm:w-16 h-1.5 bg-foreground mt-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.15)]" />
                 </div>
