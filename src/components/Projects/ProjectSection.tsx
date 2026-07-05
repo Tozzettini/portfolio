@@ -1,0 +1,65 @@
+import ProjectCard from "./ProjectCard";
+import FadeIn from "../ui/FadeIn";
+
+const projects = [
+    {
+        title: "JurisAI",
+        description: "A legal-tech platform enabling workspaces for document management and intelligent querying. Features a RAG-based chatbot and a high-performance search engine indexing 10k+ cases.",
+        technologies: ["HTML","CSS", "JavaScript","Django", "Python", "PostgreSQL", "RAGFlow", "Docker"],
+        liveLink: "https://jurisai.tech",
+        image: "/JurisAI.tech.png"
+    },
+    {
+        title: "Legal Onboarding Agent",
+        description: "An agent that automates legal onboarding for migrant workers, featuring dynamic AI-powered interviews, and automated affidavit generation.",
+        technologies: ["OpenClaw", "Ollama"],
+        liveLink: "https://youtu.be/g4YsYH6fByI",
+        image: '/JurisAI_OnBoarder.png'
+    },
+    {
+        title: "Flux",
+        description: "Flux is an AI-powered assistant that helps job seekers organize their applications and automatically tailors their resumes to perfectly match any job description.",
+        technologies: ["Next.js", "Supabase", "TypeScript", 'Shadcn UI', "OpenRouter" , "Vercel"],
+        liveLink: "https://flux-job-hunt.vercel.app/",
+        image: "/flux.png"
+    },
+    {
+        title: "Project Management",
+        description: "A project management tool built with React and Tailwind CSS. Features a clean UI, component-based architecture, and responsive design.",
+        technologies: ["React", "Javascript", "Tailwind CSS", "Vite"],
+        githubLink: "https://github.com/Sxein/project-management",
+        liveLink: "https://project-management-react-five.vercel.app/",
+        image: "/project_management.png"
+    }
+];
+
+export default function Projects() {
+    return (
+        <section id="projects" className="md:py-24 py-12 w-full border-b-4 border-foreground">
+             <div className="max-w-6xl mx-auto px-6 sm:px-10">
+                <FadeIn>
+                    <div className="text-center mb-20">
+                        <span className="font-mono inline-block px-3 py-1.5 text-xs font-black tracking-wider uppercase bg-foreground text-background border-2 border-foreground mb-4 select-none">
+                            My Portfolio
+                        </span>
+                        <h2 className="text-4xl md:text-5xl font-black tracking-tight text-foreground select-none uppercase font-mono mb-4">Featured Projects</h2>
+                        <div className="w-24 h-1.5 bg-foreground mx-auto mb-4" />
+                        <p className="text-md sm:text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
+                            A selection of projects where I've turned complex problems into elegant solutions.
+                        </p>
+                    </div>
+                </FadeIn>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                    {projects.map((project, index) => (
+                        <FadeIn key={index} delay={index * 0.15}>
+                            <ProjectCard 
+                                {...project}
+                            />
+                        </FadeIn>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
