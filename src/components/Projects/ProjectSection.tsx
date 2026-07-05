@@ -3,57 +3,45 @@ import FadeIn from "../ui/FadeIn";
 
 const projects = [
     {
-        title: "JurisAI",
-        description: "A legal-tech platform enabling workspaces for document management and intelligent querying. Features a RAG-based chatbot and a high-performance search engine indexing 10k+ cases.",
-        technologies: ["HTML","CSS", "JavaScript","Django", "Python", "PostgreSQL", "RAGFlow", "Docker"],
-        liveLink: "https://jurisai.tech",
-        image: "/JurisAI.tech.png"
+        title: "AI Anomaly Detection Device",
+        description: "Led a team of 5 to build a physical AI device on a Jetson Nano for real-time print anomaly detection, as a university project with Robert GmbH (Exact Colours). Implemented a CNN model deployed fully on-premises and oversaw UI design and end-to-end project execution.",
+        technologies: ["Jetson Nano", "CNN", "Python", "Computer Vision"],
     },
     {
-        title: "Legal Onboarding Agent",
-        description: "An agent that automates legal onboarding for migrant workers, featuring dynamic AI-powered interviews, and automated affidavit generation.",
-        technologies: ["OpenClaw", "Ollama"],
-        liveLink: "https://youtu.be/g4YsYH6fByI",
-        image: '/JurisAI_OnBoarder.png'
+        title: "LinguaDaily",
+        description: "A native Android app for daily vocabulary learning across languages, with real-time word updates via a self-hosted backend. Shipped to the Google Play Store.",
+        technologies: ["Kotlin", "Android"],
+        liveLink: "https://play.google.com/store/apps/details?id=com.joostleo.linguadailyapp&hl=en",
     },
     {
-        title: "Flux",
-        description: "Flux is an AI-powered assistant that helps job seekers organize their applications and automatically tailors their resumes to perfectly match any job description.",
-        technologies: ["Next.js", "Supabase", "TypeScript", 'Shadcn UI', "OpenRouter" , "Vercel"],
-        liveLink: "https://flux-job-hunt.vercel.app/",
-        image: "/flux.png"
-    },
-    {
-        title: "Project Management",
-        description: "A project management tool built with React and Tailwind CSS. Features a clean UI, component-based architecture, and responsive design.",
-        technologies: ["React", "Javascript", "Tailwind CSS", "Vite"],
-        githubLink: "https://github.com/Sxein/project-management",
-        liveLink: "https://project-management-react-five.vercel.app/",
-        image: "/project_management.png"
+        title: "Dharma Home",
+        description: "Migrated a client's static site to a custom WordPress theme for a yoga studio, collaborating directly with a non-technical stakeholder on design and content.",
+        technologies: ["WordPress", "PHP"],
+        liveLink: "https://dharmahome.it/",
     }
 ];
 
 export default function Projects() {
     return (
-        <section id="projects" className="md:py-24 py-12 w-full border-b-4 border-foreground">
-             <div className="max-w-6xl mx-auto px-6 sm:px-10">
+        <section id="projects" className="md:py-16 py-8 w-full border-b-3 border-foreground">
+             <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 <FadeIn>
-                    <div className="text-center mb-20">
-                        <span className="font-mono inline-block px-3 py-1.5 text-xs font-black tracking-wider uppercase bg-foreground text-background border-2 border-foreground mb-4 select-none">
+                    <div className="text-center mb-12">
+                        <span className="font-mono inline-block px-2 py-1 text-[10px] font-black tracking-wider uppercase bg-foreground text-background border-2 border-foreground mb-3 select-none">
                             My Portfolio
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-black tracking-tight text-foreground select-none uppercase font-mono mb-4">Featured Projects</h2>
-                        <div className="w-24 h-1.5 bg-foreground mx-auto mb-4" />
-                        <p className="text-md sm:text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
+                        <h2 className="text-3xl md:text-4xl font-black tracking-tight text-foreground select-none uppercase font-mono mb-3">Featured Projects</h2>
+                        <div className="w-16 h-1 bg-foreground mx-auto mb-3" />
+                        <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto font-medium">
                             A selection of projects where I've turned complex problems into elegant solutions.
                         </p>
                     </div>
                 </FadeIn>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
                     {projects.map((project, index) => (
                         <FadeIn key={index} delay={index * 0.15}>
-                            <ProjectCard 
+                            <ProjectCard
                                 {...project}
                             />
                         </FadeIn>

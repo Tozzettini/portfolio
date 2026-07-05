@@ -3,87 +3,68 @@ import FadeIn from "../ui/FadeIn";
 
 const educationJourney = [
     {
-        year: "2019 — 2020",
-        title: "Medicine in Myanmar",
+        year: "2022 — 2026",
+        title: "Software Engineering",
         institution: {
-            name: "University of Medicine, Mandalay",
-            link: "https://www.ummdy.gov.mm/",
-            tooltipDescription: "One of the prestigious medical universities in Myanmar, known for producing skilled healthcare professionals."
+            name: "Fontys Venlo University of Applied Sciences",
+            link: "https://www.fontys.nl/en/Home.htm",
+            tooltipDescription: "A leading Dutch university of applied sciences, with its Venlo campus focused on IT, engineering, and business."
         },
-        degree: "Bachelor of Medicine (M.B.B.S.)",
-        description: "Began pursuing medicine, a path I thought was my calling."
+        degree: "Bachelor's Degree, Specializing in Data Science and Artificial Intelligence",
+        description: "Specializing in data science and AI while shipping production applications for real companies along the way. Whilst working in Sales part-time.",
+        isHighlight: true
     },
     {
-        year: "2021 — 2022",
-        title: "Self-Taught Developer",
-        degree: "The Pivot: From Medicine to Code",
-        description: "When the pandemic and political turmoil halted my studies, I taught myself web development through online courses — mastering HTML, CSS, JavaScript, and React."
-    },
-    {
-        year: "2023 — 2026",
-        title: "Information Technology",
+        year: "2016 — 2021",
+        title: "Electronics & Robotics",
         institution: {
-            name: "Temasek Polytechnic",
-            link: "https://www.tp.edu.sg/home.html",
-            tooltipDescription: "A leading polytechnic in Singapore, renowned for its industry-focused curriculum and strong emphasis on practical skills."
+            name: "ITT G. Chilesotti",
+            link: "https://www.chilesotti.edu.it/",
+            tooltipDescription: "Technical Technological Institute in Thiene, Italy, specializing in electronics, robotics, and industrial technology."
         },
-        degree: "Diploma in Information Technology",
-        achievements: {
-            honors: [
-                {
-                    name: "Diploma with Merit",
-                    years: "Graduating Class",
-                    tooltipDescription: "An institutional honor awarded to the top 10% of the graduating cohort, recognizing exceptional academic excellence and outstanding performance throughout the diploma program."
-                },
-                {
-                    name: "Director's List",
-                    years: "Year 1 & 2",
-                    tooltipDescription: "An academic honor awarded to the top 10% of the diploma cohort each year, recognizing students with outstanding academic performance."
-                }
-            ]
-        },
-        description: "Built a strong foundation in software engineering while consistently ranking among the top students."
+        degree: "Technical Technological Institute Diploma",
+        description: "Built a foundation in electronics and robotics before moving into software engineering. "
     }
 ];
 
 const quickStats = [
-    { value: "1~", label: "Years of Experience", accent: "text-foreground" },
-    { value: "3×", label: "Academic Honors", accent: "text-foreground" },
-    { value: "4+", label: "Years Coding", accent: "text-foreground" },
+    { value: "2+", label: "Years of Professional Experience", accent: "text-foreground" },
+    { value: "6+", label: "Years coding", accent: "text-foreground" },
+    { value: "5+", label: "Products shipped", accent: "text-foreground" },
 ];
 
 export default function About() {
   return (
-    <section id="about" className="md:py-24 py-12 w-full border-b-4 border-foreground">
+    <section id="about" className="md:py-16 py-8 w-full border-b-3 border-foreground">
       {/* About Me Section */}
-      <div className="max-w-6xl mx-auto px-6 sm:px-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <FadeIn>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-foreground select-none uppercase font-mono">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight text-foreground select-none uppercase font-mono">
               About Me
             </h2>
-            <div className="w-16 h-2 bg-foreground mx-auto mt-3" />
+            <div className="w-10 h-1.5 bg-foreground mx-auto mt-2" />
           </div>
         </FadeIn>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-stretch">
           <FadeIn direction="right" delay={0.2}>
-            <div className="flex flex-col gap-6 text-left text-foreground bg-card border-4 border-foreground p-6 sm:p-10 shadow-[8px_8px_0px_0px_var(--foreground)]">
-              <p className="text-lg leading-relaxed font-medium">
-                Full-Stack Developer specializing in <span className="underline underline-offset-4 decoration-2 decoration-foreground font-bold">React, Next.js, Node.js</span>. I turn ideas into scalable, production-ready web applications.
-              </p>
-              <p className="text-lg leading-relaxed font-medium">
-                From medical school in Myanmar to self-taught developer to Singapore's top IT students — I thrive on learning, building, and shipping.
-              </p>
+            <div className="h-full flex flex-col gap-3 text-left text-foreground bg-card border-2 border-foreground p-3 sm:p-4 shadow-[4px_4px_0px_0px_var(--foreground)]">
+              <p className="text-sm leading-relaxed font-medium">
+                  Software Engineer specializing in <span className="underline underline-offset-4 decoration-2 decoration-foreground font-bold">AI and full-stack development</span>. I turn ideas into scalable, production-ready applications, from automated business pipelines to physical AI devices.
+                </p>
+                <p className="text-sm leading-relaxed font-medium">
+                  Born in New York, raised on robotics and automation during high school in Italy, and trained as a software engineer in the Netherlands. I'm driven by solving problems and helping people get their time back, whether that's through code or a conversation. I love sales for the same reason: I get to sit with someone, understand what they actually need, and go build it.
+                </p>
 
               {/* Quick Stats - Updated with Neubrutalist boxes */}
-              <div className="grid grid-cols-3 gap-3 mt-4 pt-6 border-t-4 border-foreground">
+              <div className="grid grid-cols-3 gap-1.5 mt-2 pt-3 border-t-2 border-foreground">
                 {quickStats.map((stat, i) => (
-                  <div key={i} className="text-center bg-background border-2 border-foreground p-3 shadow-[3px_3px_0px_0px_var(--foreground)]">
-                    <div className={`text-xl sm:text-2xl font-black ${stat.accent}`}>
+                  <div key={i} className="text-center bg-background border-2 border-foreground p-1.5 shadow-[2px_2px_0px_0px_var(--foreground)]">
+                    <div className={`text-base sm:text-lg font-black ${stat.accent}`}>
                       {stat.value}
                     </div>
-                    <div className="text-[10px] sm:text-xs font-mono font-black uppercase tracking-tight text-muted-foreground mt-1.5 leading-tight">
+                    <div className="text-[9px] sm:text-[10px] font-mono font-black uppercase tracking-tight text-muted-foreground mt-1 leading-tight">
                       {stat.label}
                     </div>
                   </div>
@@ -91,16 +72,16 @@ export default function About() {
               </div>
             </div>
           </FadeIn>
-          
+
           <FadeIn direction="left" delay={0.4}>
-            <div className="flex justify-center">
+            <div className="h-full flex items-center justify-center">
               {/* Picture Frame Wrapper */}
-              <div className="relative w-80 h-96 bg-card border-4 border-foreground shadow-[10px_10px_0px_0px_var(--foreground)] p-3 select-none">
+              <div className="relative h-90 aspect-4/5 bg-card border-2 border-foreground shadow-[4px_4px_0px_0px_var(--foreground)] p-1.5 select-none">
                 <div className="w-full h-full border-2 border-foreground overflow-hidden">
-                  <img 
-                    src="/profile.jpeg" 
-                    alt="Profile" 
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
+                  <img
+                    src="/profile.jpg"
+                    alt="Profile"
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
               </div>
@@ -110,36 +91,36 @@ export default function About() {
       </div>
 
       {/* Education Journey Section */}
-      <div className="max-w-4xl mx-auto mt-28 px-6 sm:px-10">
+      <div className="max-w-4xl mx-auto mt-16 px-4 sm:px-6">
         <FadeIn>
-          <div className="text-center mb-16">
-            <span className="font-mono inline-block px-3 py-1.5 text-xs font-black tracking-wider uppercase bg-foreground text-background border-2 border-foreground mb-4 select-none">
+          <div className="text-center mb-10">
+            <span className="font-mono inline-block px-2 py-1 text-[10px] font-black tracking-wider uppercase bg-foreground text-background border-2 border-foreground mb-3 select-none">
               My Journey
             </span>
-            <h2 className="text-4xl font-black text-foreground mb-4 uppercase">Education & Growth</h2>
-            <div className="w-24 h-1.5 bg-foreground mx-auto mb-4" />
-            <p className="text-muted-foreground text-md sm:text-lg max-w-2xl mx-auto font-medium">
-              An unconventional path — from medicine to code, shaped by resilience and curiosity.
+            <h2 className="text-3xl font-black text-foreground mb-3 uppercase">Education & Growth</h2>
+            <div className="w-16 h-1 bg-foreground mx-auto mb-3" />
+            <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto font-medium">
+              From electronics and robotics in Italy to specializing in Data Science and AI in the Netherlands.
             </p>
           </div>
         </FadeIn>
-        
+
         {/* Timeline (Refactored to be thick, solid, and left-aligned for maximum card width) */}
         <div className="relative max-w-3xl mx-auto">
-          <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-1 bg-foreground" />
-          
-          <div className="space-y-10 md:space-y-14">
+          <div className="absolute left-3 sm:left-5 top-0 bottom-0 w-0.5 bg-foreground" />
+
+          <div className="space-y-6 md:space-y-8">
             {educationJourney.map((edu, index) => (
-              <FadeIn 
-                key={index} 
+              <FadeIn
+                key={index}
                 delay={index * 0.2}
                 direction="right"
               >
                 <div className="relative flex items-start">
                   {/* Robust Black Circle Marker */}
-                  <div className="absolute left-4 sm:left-6 w-6 h-6 rounded-full bg-background border-4 border-foreground transform -translate-x-1/2 mt-8 z-10 shadow-[2px_2px_0px_var(--foreground)]" />
-                  
-                  <div className="w-full ml-10 sm:ml-14">
+                  <div className="absolute left-3 sm:left-5 w-4 h-4 rounded-full bg-background border-3 border-foreground transform -translate-x-1/2 mt-6 z-10 shadow-[2px_2px_0px_var(--foreground)]" />
+
+                  <div className="w-full ml-7 sm:ml-10">
                     <EducationCard {...edu} />
                   </div>
                 </div>
