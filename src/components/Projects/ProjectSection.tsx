@@ -38,7 +38,7 @@ export default function Projects() {
                     </div>
                 </FadeIn>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-4">
                     {projects.map((project, index) => (
                         <FadeIn key={index} delay={index * 0.15}>
                             <ProjectCard
