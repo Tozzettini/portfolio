@@ -81,7 +81,7 @@ export default function About() {
                   <img
                     src="/profile.jpg"
                     alt="Profile"
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    className="w-full h-full object-cover object-top scale-125 transition-transform duration-700 hover:scale-[1.35]"
                   />
                 </div>
               </div>

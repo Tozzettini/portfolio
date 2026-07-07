@@ -84,9 +84,9 @@ export default function Home() {
                     <span className="text-foreground mr-2 select-none">&gt;</span>
                     <TypeAnimation
                      sequence={[
-                                'am not your average Software Engineer.', 2000,
-                                'ship MVPs, then iterate fast.', 2000,
-                                'turn business problems into software solutions.', 2000
+                                'is not your average Software Engineer.', 2000,
+                                'ships MVPs, then iterates fast.', 2000,
+                                'turns business problems into software solutions.', 2000
                               ]}
                       speed={50}
                       style={{ display: 'inline' }}
