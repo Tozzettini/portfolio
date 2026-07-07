@@ -33,7 +33,7 @@ export default function FadeIn({ children, delay = 0, className = "", direction 
         <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: once, margin: "-100px" }}
+            viewport={{ once: once, margin: "0px" }}
             variants={variants}
             className={className}
         >
